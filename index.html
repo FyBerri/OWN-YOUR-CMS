@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Clinic System Without the Chaos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="headerbar">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none">
+        <rect x="1" y="1" width="30" height="30" rx="8" fill="#12294D"/>
+        <path d="M8 22 L8 16 L16 16 L16 10 L24 10" stroke="#6FFFE0" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="8" cy="22" r="2" fill="#6FFFE0"/><circle cx="24" cy="10" r="2" fill="#6FFFE0"/>
+      </svg>
+      <div><div class="brand-name">Front Door Flow</div><div class="brand-sub">Clinic System Studio</div></div>
+    </div>
+    <nav>
+      <a href="#overview">Overview</a><a href="#framework">Framework</a><a href="#chapters">Chapters</a><a href="#pricing">Pricing</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn btn-primary btn-small" onclick="buyNow(this)">Buy — RM39.90</button>
+    </div>
+  </div>
+</header>
+
+<div id="view-store" class="view active">
+
+  <section class="hero" id="overview">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Lead magnet ebook</span>
+        <h1>Own your Clinic System Without spending on large capital on a Website.</h1>
+        <p class="tagline">A clear ebook for making new patient flow, return access, and staff routing work without cluttering the site.</p>
+        <div class="cta-row">
+          <button class="btn btn-primary" onclick="buyNow(this)">Get instant access</button>
+          <button class="btn btn-ghost" onclick="scrollToId('chapters')">See what's inside</button>
+        </div>
+        <div class="cta-row">
+          <span class="price-tag">RM39.90</span>
+          <span class="price-note">One-time · instant lifetime access</span>
+        </div>
+        <p class="hero-fineprint">For clinic managers, healthcare operators, and dental admins who want intake to move faster — not a bigger website bill.</p>
+      </div>
+      <div class="mockup-stage">
+        <span class="badge-float">Instant download</span>
+        <div class="book">
+          <div class="book-spine"></div>
+          <div class="book-cover">
+            <div>
+              <div class="book-eyebrow">Lead magnet ebook</div>
+              <div class="book-title" style="margin-top:8px;">Complete Clinic System Without the Chaos</div>
+            </div>
+            <div>
+              <div class="book-diagram">
+                <div class="book-dot"></div><div class="book-line"></div>
+                <div class="book-dot"></div><div class="book-line"></div>
+                <div class="book-dot"></div>
+              </div>
+              <div class="book-foot" style="margin-top:8px;">FRONT DOOR FLOW EDITION</div>
+            </div>
+          </div>
+          <div class="pages-stack"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="framework">
+    <div class="wrap">
+      <div class="framework-panel">
+        <div>
+          <span class="framework-eyebrow">The framework</span>
+          <h3>Front Door Flow</h3>
+          <p>Discovery, intake, and follow-up — one clean sequence, instead of a website that turns into an operations hub.</p>
+          <button class="btn btn-primary btn-small" style="margin-top:6px;" onclick="buyNow(this)">Get the ebook</button>
+        </div>
+        <div class="corridor">
+          <div class="flow">
+            <div class="flow-step"><span class="num">01</span><div class="name">Discovery</div></div>
+            <div class="flow-arrow"><svg viewBox="0 0 28 14"><path d="M0 7 H22 M16 1 L22 7 L16 13" stroke="#6FFFE0" stroke-width="2" fill="none"/></svg></div>
+            <div class="flow-step accent"><span class="num">02</span><div class="name">Intake</div></div>
+            <div class="flow-arrow"><svg viewBox="0 0 28 14"><path d="M0 7 H22 M16 1 L22 7 L16 13" stroke="#6FFFE0" stroke-width="2" fill="none"/></svg></div>
+            <div class="flow-step"><span class="num">03</span><div class="name">Follow-up</div></div>
+          </div>
+          <div class="corridor-caption">inbox → routed page → correct desk</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="transformation">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">The transformation</span>
+        <h2>From cluttered homepage to one clear path</h2>
+      </div>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="showTab(this,'before')">Before</button>
+        <button class="tab-btn" onclick="showTab(this,'after')">After</button>
+      </div>
+      <div class="tab-panel active" data-panel="before">
+        <div class="browser-mock">
+          <div class="browser-bar"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><div class="browser-url">urgentcare-example.com</div></div>
+          <div class="browser-body">
+            <div class="browser-nav">
+              <span class="browser-pill" style="background:#FFF1EC;border-color:#F0A98A;color:#C1501E;">Book</span>
+              <span class="browser-pill" style="background:#FFF1EC;border-color:#F0A98A;color:#C1501E;">Portal</span>
+              <span class="browser-pill" style="background:#FFF1EC;border-color:#F0A98A;color:#C1501E;">Staff Login</span>
+              <span class="browser-pill" style="background:#FFF1EC;border-color:#F0A98A;color:#C1501E;">Billing</span>
+              <span class="browser-pill" style="background:#FFF1EC;border-color:#F0A98A;color:#C1501E;">Forms</span>
+            </div>
+            <div class="browser-block w80"></div><div class="browser-block w60"></div><div class="browser-block w40"></div>
+            <p style="font-size:12.5px;color:var(--ink-soft);margin-top:12px;">Everything competes for the same homepage.</p>
+          </div>
+        </div>
+      </div>
+      <div class="tab-panel" data-panel="after">
+        <div class="browser-mock">
+          <div class="browser-bar"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><div class="browser-url">your-clinic.com</div></div>
+          <div class="browser-body">
+            <div class="browser-nav">
+              <span class="browser-pill">New Patients</span><span class="browser-pill">Returning Patients</span><span class="browser-pill">Contact</span>
+            </div>
+            <div class="browser-block w80"></div><div class="browser-block w60"></div><div class="browser-block w40"></div>
+            <p style="font-size:12.5px;color:var(--ink-soft);margin-top:12px;">Each visitor gets one clear lane. Tools stay off the public nav.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="chapters">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Inside the ebook</span>
+        <h2>Five chapters. Tap to preview.</h2>
+      </div>
+      <div class="chapter-list" id="chapter-list"></div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Get the ebook</span>
+        <h2>One price, instant access</h2>
+      </div>
+      <div class="pricing-card">
+        <div>
+          <div class="pricing-title">Complete Clinic System Without the Chaos</div>
+          <div class="pricing-amount">RM39.90 <span>one-time</span></div>
+          <ul class="includes">
+            <li>Full ebook (PDF), instant download</li>
+            <li>Cover image, yours to keep</li>
+            <li>Welcome post with how-to-use guide</li>
+            <li>Lifetime access — no subscription</li>
+            <li>Reader discussion area</li>
+          </ul>
+          <button class="btn btn-primary" style="margin-top:20px;" onclick="buyNow(this)">Get instant access — RM39.90</button>
+        </div>
+        <div class="browser-mock" style="box-shadow:none;">
+          <div class="browser-bar"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><div class="browser-url">your-library / downloads</div></div>
+          <div class="browser-body">
+            <div class="stat-row"><span>Ebook PDF</span><b>Instant</b></div>
+            <div class="stat-row"><span>Cover image</span><b>Instant</b></div>
+            <div class="stat-row"><span>Website example</span><b>Instant</b></div>
+            <div class="stat-row"><span>Code template</span><b>+RM99.90</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="apps">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Store setup</span>
+        <h2>Delivery, questions, support</h2>
+      </div>
+      <div class="apps-grid">
+        <div class="app-tile">
+          <svg class="icon" viewBox="0 0 34 34"><rect x="4" y="3" width="26" height="28" rx="4" fill="#EAF0FF" stroke="#2F6FED" stroke-width="1.5"/><path d="M17 10v9m0 0l-4-4m4 4l4-4" stroke="#2F6FED" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="10" y="23" width="14" height="2.4" rx="1" fill="#2F6FED"/></svg>
+          <h4>Downloadable Files</h4><p>Delivers the ebook PDF and cover instantly.</p><span class="tag">Placeholder app</span>
+        </div>
+        <div class="app-tile">
+          <svg class="icon" viewBox="0 0 34 34"><rect x="3" y="6" width="28" height="19" rx="4" fill="#EAF0FF" stroke="#00BFA0" stroke-width="1.5"/><path d="M9 12h16M9 17h10" stroke="#00BFA0" stroke-width="1.8" stroke-linecap="round"/><path d="M12 25l3 4 3-4" fill="#EAF0FF" stroke="#00BFA0" stroke-width="1.5"/></svg>
+          <h4>Posts / Community</h4><p>Welcome post and reader Q&amp;A thread.</p><span class="tag">Placeholder app</span>
+        </div>
+        <div class="app-tile">
+          <svg class="icon" viewBox="0 0 34 34"><circle cx="17" cy="17" r="14" fill="#EAF0FF" stroke="#12294D" stroke-width="1.5"/><path d="M17 11v6l4 3" stroke="#12294D" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h4>Support / Inbox</h4><p>Ask how it applies to your own site.</p><span class="tag">Placeholder app</span>
+        </div>
+        <div class="app-tile">
+          <svg class="icon" viewBox="0 0 34 34"><rect x="4" y="20" width="5" height="9" fill="#FFB020"/><rect x="14.5" y="13" width="5" height="16" fill="#FFB020"/><rect x="25" y="7" width="5" height="22" fill="#FFB020"/></svg>
+          <h4>Analytics</h4><p>Tracks downloads and engagement.</p><span class="tag">Optional add-on</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div class="footer-note">Complete Clinic System Without the Chaos — RM39.90, one-time, instant access.</div>
+      <div class="footer-note">© 2026 Front Door Flow Studio</div>
+    </div>
+  </footer>
+</div>
+
+<div id="view-member" class="view">
+  <div class="member-header">
+    <div class="wrap">
+      <div>
+        <a class="back-link" href="#" onclick="showView('store'); return false;">← Back to store</a>
+        <h2>Your download &amp; access page</h2>
+      </div>
+      <span class="badge-success">✓ Purchase complete · RM39.90</span>
+    </div>
+  </div>
+
+  <div class="wrap member-grid">
+    <div>
+      <div class="card">
+        <div class="sidebar-label">Your files</div>
+        <div class="file-row">
+          <div class="file-meta">
+            <div class="file-icon"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z" fill="none" stroke="#2F6FED" stroke-width="1.5"/><path d="M15 2v5h5" fill="none" stroke="#2F6FED" stroke-width="1.5"/></svg></div>
+            <div><div class="file-name">Clinic System Without the Chaos.pdf</div><div class="file-sub">EBOOK · 5 CHAPTERS</div></div>
+          </div>
+          <button class="btn btn-primary btn-small" onclick="fakeDownload(this)">Download</button>
+        </div>
+        <div class="file-row">
+          <div class="file-meta">
+            <div class="file-icon"><svg width="18" height="18" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="#2F6FED" stroke-width="1.5"/><circle cx="9" cy="10" r="1.6" fill="#2F6FED"/><path d="M4 17l5-5 4 4 3-3 4 4" fill="none" stroke="#2F6FED" stroke-width="1.5"/></svg></div>
+            <div><div class="file-name">Cover image (JPG)</div><div class="file-sub">2400 × 3000 PX</div></div>
+          </div>
+          <button class="btn btn-ghost btn-small" onclick="fakeDownload(this)">Download</button>
+        </div>
+        <div class="file-row">
+          <div class="file-meta">
+            <div class="file-icon"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none" stroke="#2F6FED" stroke-width="1.5"/><path d="M8 9l-3 3 3 3M16 9l3 3-3 3" fill="none" stroke="#2F6FED" stroke-width="1.5"/></svg></div>
+            <div><div class="file-name">website-example.html</div><div class="file-sub">FRONT DOOR FLOW SAMPLE</div></div>
+          </div>
+          <button class="btn btn-ghost btn-small" onclick="fakeDownload(this)">Download</button>
+        </div>
+        <div class="upsell">
+          <div class="upsell-text"><h4>Want the workable version?</h4><p>Get the buildable code template.</p></div>
+          <button class="btn btn-primary btn-small" onclick="fakeUpsell(this)">Add — RM99.90</button>
+        </div>
+      </div>
+
+      <div class="card welcome-post">
+        <div class="post-meta"><div class="avatar">FDF</div><div><div class="who">Front Door Flow Studio</div><div class="when">Welcome post · pinned</div></div></div>
+        <h3>Welcome — here's how to use this</h3>
+        <p>The promise: this ebook speeds up intake without turning your website into a confusing operations hub. Nothing to install, just a clearer layout.</p>
+        <p>Do it in this order:</p>
+        <ol>
+          <li><strong>Download the ebook</strong> and read the five chapters in order.</li>
+          <li><strong>Open the website example (HTML)</strong> to see Front Door Flow as a real page.</li>
+          <li><strong>Ready to build it?</strong> Add the workable code template for RM99.90.</li>
+        </ol>
+        <p>Questions about your own clinic site? Ask below, or message Support.</p>
+      </div>
+
+      <div class="card">
+        <div class="sidebar-label">Reader discussion &amp; Q&amp;A</div>
+        <div class="discussion-item"><div class="q"><span class="discussion-tag">Ch. 4</span>How specific should routing rules be for two locations?</div><div class="a">Route by intent first, location second — otherwise staff maintain two systems.</div></div>
+        <div class="discussion-item"><div class="q"><span class="discussion-tag">Ch. 5</span>Where should the "existing patient" link live?</div><div class="a">Same visible spot on every page — usually the header.</div></div>
+        <div class="discussion-item"><div class="q"><span class="discussion-tag">General</span>Does this work for a single-provider dental practice?</div><div class="a">Yes — fewer rules, same three lanes.</div></div>
+        <div class="ask-box"><input type="text" placeholder="Ask about your clinic's website..."><button class="btn btn-primary btn-small" onclick="fakePost(this)">Post</button></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card">
+        <div class="sidebar-label">Order summary</div>
+        <div class="stat-row"><span>Product</span><b>Ebook</b></div>
+        <div class="stat-row"><span>Price</span><b>RM39.90</b></div>
+        <div class="stat-row"><span>Access</span><b>Lifetime</b></div>
+        <div class="stat-row"><span>Delivery</span><b>Instant</b></div>
+      </div>
+      <div class="card">
+        <div class="sidebar-label">Need help?</div>
+        <p style="font-size:13px;color:var(--ink-soft);margin:0 0 12px;">Ask how Front Door Flow fits your site.</p>
+        <button class="btn btn-ghost btn-small btn-wide" onclick="fakeSupport(this)">Message support</button>
+      </div>
+      <div class="card">
+        <div class="sidebar-label">Analytics (owner view)</div>
+        <div class="stat-row"><span>Downloads</span><b>1,204</b></div>
+        <div class="stat-row"><span>Post views</span><b>3,890</b></div>
+        <div class="stat-row"><span>Upsell rate</span><b>18%</b></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sticky-cta" id="stickyCta">
+  <div class="wrap">
+    <div class="sticky-cta-info">Complete Clinic System Without the Chaos — <b>RM39.90</b> one-time</div>
+    <button class="btn btn-primary" onclick="buyNow(this)">Get instant access</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
