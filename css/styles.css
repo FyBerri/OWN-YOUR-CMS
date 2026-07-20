@@ -192,3 +192,34 @@
   .back-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#C7D4F5;text-decoration:none;margin-bottom:8px;}
   .toast{position:fixed;top:80px;left:50%;transform:translateX(-50%) translateY(-16px);background:var(--navy);color:#fff;padding:12px 22px;border-radius:999px;font-size:13.5px;font-weight:600;opacity:0;pointer-events:none;transition:all .25s ease;z-index:90;box-shadow:0 12px 30px rgba(22,50,74,.35);}
   .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* Container layout */
+.ebook-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Cropped rectangle image with rounded edges */
+.ebook-img {
+  width: 320px;            /* Adjust width as needed */
+  height: 200px;           /* Adjust height as needed */
+  object-fit: cover;       /* Crops image to fit rectangle without stretching */
+  border-radius: 16px;     /* Smooth rounded edges */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Soft outer drop shadow */
+}
+
+/* Glowing text caption */
+.eyebrow {
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #00ffcc;          /* Bright glow color (cyan/teal highlight) */
+  text-shadow: 
+    0 0 8px rgba(0, 255, 204, 0.8),
+    0 0 16px rgba(0, 255, 204, 0.5),
+    0 0 24px rgba(0, 255, 204, 0.3);
+}
