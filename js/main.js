@@ -19,17 +19,14 @@ chapters.forEach((c,i)=>{
   list.appendChild(div);
 });
 
-function showView(name){
-  document.getElementById('view-store').classList.toggle('active', name==='store');
-  document.getElementById('view-member').classList.toggle('active', name==='member');
-  window.scrollTo({top:0, behavior:'smooth'});
-}
-function buyNow(btn){
-  const original = btn.innerHTML;
-  btn.setAttribute('data-state','loading');
-  btn.innerHTML = 'Processing…';
-  showToast('Redirecting to checkout…');
-  setTimeout(()=>{ showView('member'); btn.removeAttribute('data-state'); btn.innerHTML = original; }, 650);
+const checkoutUrls = {
+  ebook: "https://front-door-flow120.klikwoi.net/product/b42d95b8-efc9-4eb0-9e35-734d107a461e",
+  code: "https://front-door-flow120.klikwoi.net/product/0c0702dd-0baa-4b14-b5fd-40342738db42",
+  bundle: "https://front-door-flow120.klikwoi.net/product/717b8983-d022-4e54-9c14-d13ba3eb60c3"
+};
+function buyNow(product = "ebook"){
+  const url = checkoutUrls[product] || checkoutUrls.ebook;
+  window.location.assign(url);
 }
 function scrollToId(id){ document.getElementById(id).scrollIntoView({behavior:'smooth'}); }
 function showTab(btn, name){
@@ -37,15 +34,12 @@ function showTab(btn, name){
   btn.classList.add('active');
   document.querySelectorAll('.tab-panel').forEach(p=>p.classList.toggle('active', p.dataset.panel===name));
 }
-function fakeDownload(btn){ const t=btn.textContent; btn.textContent='Downloaded ✓'; showToast('File downloaded'); setTimeout(()=>btn.textContent=t,1400); }
-function fakeUpsell(btn){ btn.textContent='Added ✓'; showToast('Code template added — RM99.90'); }
-function fakePost(btn){ showToast('Question posted to discussion'); }
-function fakeSupport(btn){ showToast('Support message started'); }
 function showToast(msg){
   const t = document.getElementById('toast');
-  t.textContent = msg; t.classList.add('show');
-  clearTimeout(window._toastTimer);
-  window._toastTimer = setTimeout(()=>t.classList.remove('show'), 2200);
+  if (!t) return;
+  t.textContent = msg;
+  t.classList.add('show');
+  window.setTimeout(()=>t.classList.remove('show'), 2200);
 }
 window.addEventListener('scroll', ()=>{
   const cta = document.getElementById('stickyCta');

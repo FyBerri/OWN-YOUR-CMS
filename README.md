@@ -1,68 +1,34 @@
-# Complete Clinic System Without the Chaos — Sales Funnel Webstore
+# Front Door Flow — Sales Website
 
-A static, ready-to-deploy sales funnel page for the "Complete Clinic System Without the Chaos" lead magnet ebook.
+A static responsive landing page for the Front Door Flow digital products. The site presents the three offers and sends customers to the corresponding KlikWoi product checkout.
 
-## What's included
+## Products and checkout links
 
-```
-clinic-system-webstore/
-├── index.html        # All markup: storefront + member/access page
-├── css/
-│   └── styles.css     # All styling (colors, layout, components)
-├── js/
-│   └── main.js        # Interactivity (buy flow, chapter accordion, tabs, toasts)
-└── README.md
-```
+- **eBook only — RM69.90:** https://front-door-flow120.klikwoi.net/product/b42d95b8-efc9-4eb0-9e35-734d107a461e
+- **Code template only — RM99.90:** https://front-door-flow120.klikwoi.net/product/0c0702dd-0baa-4b14-b5fd-40342738db42
+- **Complete bundle — RM159.90:** https://front-door-flow120.klikwoi.net/product/717b8983-d022-4e54-9c14-d13ba3eb60c3
+- **Storefront:** https://front-door-flow120.klikwoi.net/shop
 
-No build step, no dependencies to install — it's plain HTML/CSS/JS. The only external
-resource loaded is Google Fonts (Space Grotesk, Inter, IBM Plex Mono) via a `<link>` tag
-in `index.html`.
+The bundle saves RM9.90 (about 5.8%) compared with buying the eBook and code template separately (RM169.80).
 
-## Running it locally
+## Run locally
 
-Just open `index.html` directly in a browser, or serve the folder:
+Open `index.html` in a browser, or serve the directory:
 
 ```bash
-cd clinic-system-webstore
 python3 -m http.server 8000
-# then visit http://localhost:8000
 ```
 
-## Deploying
+Then visit http://localhost:8000.
 
-This is a static site, so it works on any static host. A few common options:
+## Deployment notes
 
-**Netlify / Vercel (drag-and-drop)**
-- Zip contents (or the folder itself) and drag it onto the Netlify "Deploys" page,
-  or run `vercel` / `netlify deploy` from inside this folder.
+This is a static HTML/CSS/JavaScript website. Keep the `css/`, `js/`, and referenced image/video assets alongside `index.html` when deploying.
 
-**GitHub Pages**
-1. Push this folder to a GitHub repo.
-2. In repo Settings → Pages, set the source branch/folder to the repo root.
-3. Your site will be live at `https://<username>.github.io/<repo>/`.
+## Payment and digital delivery
 
-**Any web host / cPanel / S3**
-- Upload `index.html`, `css/`, and `js/` to your web root (e.g. `public_html/`) keeping
-  the folder structure intact.
+The Buy buttons open the matching hosted KlikWoi product checkout. This website does **not** process payments, verify orders, or grant downloads itself. Configure and test the product prices, payment methods, post-payment delivery, and customer emails in KlikWoi before launch. Never treat a visit to this landing page as proof of payment.
 
-## What's a placeholder vs. functional
+## SEO and content
 
-- **Layout, styling, copy, and all client-side interactions** (buy button flow, chapter
-  accordion, before/after tabs, download/upsell/support buttons, toasts) are fully
-  working in the browser.
-- **Checkout, real file delivery, community posts, and the support inbox** are visual
-  placeholders — clicking "Buy" simulates a purchase and reveals the mock member/access
-  page. To go live, wire these up to real services, e.g.:
-  - Checkout → Stripe Checkout, Lemon Squeezy, Gumroad, etc.
-  - File delivery → your checkout provider's built-in file delivery, or an S3/CDN link
-    gated behind purchase confirmation.
-  - Community/Q&A → a Discourse, Circle, or simple comments embed.
-  - Support inbox → a shared inbox tool (Help Scout, Front) or a contact form wired to
-    email.
-
-## Editing content
-
-- Chapter titles/descriptions: edit the `chapters` array at the top of `js/main.js`.
-- Colors: edit the CSS custom properties in the `:root { ... }` block at the top of
-  `css/styles.css`.
-- Copy (headline, tagline, pricing, welcome post): edit directly in `index.html`.
+The page includes a title, meta description, canonical URL, and Open Graph/Twitter metadata. Ensure the canonical domain matches the final production domain and submit the live URL/sitemap in Google Search Console once deployed.
